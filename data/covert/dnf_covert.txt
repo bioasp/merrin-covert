@@ -1,0 +1,19 @@
+R1 = Tc1|Tc2
+R2a = R1+!RPb
+R2b = R5a+ATP+NADH+!R1|R5b+ATP+NADH+!R1
+R3 = R1|R2b|Fext
+R4 = R2a
+R5a = R8b+!RPO2
+R5b = R8b+RPO2
+R6 = R2a
+R7 = R2a+!RPb+NADH
+R8a = R4+ATP+NADH+!RPh
+R8b = Th
+Rres = Oxygen+NADH+!RPO2
+Tc2 = Carbon2+!RPc1
+Biomass = R2a+R3+Th+ATP|R5a+R3+Th+ATP|R5b+R3+Th+ATP
+ATP=R2a|Rres|R8b|R6
+NADH=R2a|R8b|R5a|R5b
+Th = Hext|R8a
+RPh = Hext
+
