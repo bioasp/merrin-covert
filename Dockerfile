@@ -21,4 +21,7 @@ RUN pip install --no-cache https://github.com/bioasp/merrin/archive/$MERRIN_VERS
 RUN rm -rf /notebook/*
 COPY --chown=user:user . /notebook/
 
+ARG IMAGE_NAME
+ENV DOCKER_IMAGE=$IMAGE_NAME
+
 USER user

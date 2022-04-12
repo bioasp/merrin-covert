@@ -1,9 +1,11 @@
 IMAGE_NAME=bioasp/merrin
-IMAGE_TAG=latest
+IMAGE_TAG=v0
 IMAGE=$(IMAGE_NAME):$(IMAGE_TAG)
 
 build:
-	docker build -t $(IMAGE) .
+	docker build -t $(IMAGE) \
+		--build-arg IMAGE_NAME=$(IMAGE) \
+		.
 
 push:
 	docker push $(IMAGE)
