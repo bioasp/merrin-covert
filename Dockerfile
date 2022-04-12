@@ -18,4 +18,7 @@ RUN pip install --no-cache https://github.com/bioasp/bonesis/archive/$BONESIS_VE
 ARG MERRIN_VERSION=main
 RUN pip install --no-cache https://github.com/bioasp/merrin/archive/$MERRIN_VERSION.zip
 
+RUN rm -rf /notebook/*
+COPY --chown=user:user . /notebook/
+
 USER user
