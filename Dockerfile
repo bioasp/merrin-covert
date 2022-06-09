@@ -12,10 +12,10 @@ RUN curl -fL https://github.com/bioasp/merrin/releases/download/artifacts/met4j-
 
 RUN conda install -c conda-forge pulp
 
-ARG BONESIS_VERSION=master
+ARG BONESIS_VERSION=741c170ad7b437cbf07b93e68eb9a2cc0443880d
 RUN pip install --no-cache https://github.com/bioasp/bonesis/archive/$BONESIS_VERSION.zip
 
-ARG MERRIN_VERSION=main
+ARG MERRIN_VERSION=9c91185ac7aa3695dbbadf6d01d308671dc6e462
 RUN pip install --no-cache https://github.com/bioasp/merrin/archive/$MERRIN_VERSION.zip
 
 RUN rm -rf /notebook/*
