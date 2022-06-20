@@ -8,12 +8,11 @@ The notebooks can be visualized at https://nbviewer.org/github/bioasp/merrin-cov
 They can be executed interactively:
 * online, using [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bioasp/merrin-covert/HEAD)
 * or on your computer, provided you have [Docker](https://docs.docker.com/get-docker/) and Python installed:
-   1. download the notebooks and data from  https://github.com/bioasp/merrin-covert/archive/main.zip and extract the zip file
-   2. execute the following commands, where ``merrin-covert`` is the folder in which you extracted the notebooks
   ```
-  sudo pip install -U colomoto-docker # you may have to use pip3 instead of pip
-  colomoto-docker --image bioasp/merrin -V v0 --bind merrin-covert
+  docker pull bioasp/merrin:v1
+  docker run -it --rm -p 8888:8888 bioasp/merrin:v1
   ```
+  then point your browser to http://127.0.0.1:8888.
 
 The ground-truth models are specified in the `data` repository, e.g., https://github.com/bioasp/merrin-covert/tree/main/data/covert:
 * `metablic_network.xml` specifies the metabolic network in SBML format
