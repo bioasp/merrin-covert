@@ -1,5 +1,7 @@
 # Case study for MEtabolic Regulation Rule INference (MERRIN) on Covert's model
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6670165.svg)](https://doi.org/10.5281/zenodo.6670165)
+
 This repository contains the data and notebook to reproduce the inference of
 regulatory rules of the core regulated metabolic networks of [Covert *et al* (2001)](https://doi.org/10.1006/jtbi.2001.2405) from dynamic regulatory FBA (d-rFBA) simulations, performed with [FlexFlux](https://bmcsystbiol.biomedcentral.com/articles/10.1186/s12918-015-0238-z).
 
